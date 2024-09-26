@@ -5,6 +5,12 @@
 
 function subtract(...numbers) {
   // Your code here
+  let previous = 0;
+  return numbers.map(val => {
+    let tmp = previous - val;
+    previous = val;
+    return tmp;
+  })
 }
 
 console.log(subtract(10, 2, 3)); // Example usage
